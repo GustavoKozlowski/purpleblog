@@ -2,14 +2,14 @@ import React from "react";
 import "./styles.css";
 import { Link } from "react-router-dom";
 
-export default function Post(post) {
+export default function Post({post}) {
   return (
     <div className="post-container">
       <div>
         <img
           className="post-img"
           src={post.image}
-          alt="foto de uma bela paisagem"
+          alt={post.alt}
         />
       </div>
       <div>

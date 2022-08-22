@@ -1,25 +1,16 @@
 import React from "react";
 import FeaturePost from "../../components/featurespost";
+
+
 import PostList from "../../components/postlist";
 export default function Home() {
   const posts = [
     {
-        image:"https://i.pinimg.com/564x/50/b6/13/50b613ff6625f02052822e66567a5b38.jpg",
-        date:"",
-        title:"",
-        description:"",
-    },
-    {
-        image:"https://www.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-nature-1725825019",
-        date:"",
-        title:"",
-        description:"",
-    },
-    {
-        image:"https://pin.it/5lZUSJ5",
-        date:"",
-        title:"",
-        description:"",
+        image: 'https://coisasdojapao.com/wp-content/uploads/2016/12/monte-fuji.jpg',
+        date :"January 28, 2021",
+        title:"Monte Fuji",
+        description :"Apenas uma bela foto do explendoso Monte Fuji.",
+        alt: 'Monte fuji',
     },
   ]
   return (
