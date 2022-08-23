@@ -31,8 +31,9 @@ export default function Home() {
   const [posts, setPosts] = useState(mock);
 
   async function getPosts(){
-        const res = await fetch("https://cms-blog-tutorial.herokuapp.com/api/posts");
-        console.log("Resposta da API", res);
+        const res = await fetch("https://cms-blog-tutorial.herokuapp.com/api/posts?populate=*");
+        const data = await res.json();
+        setPosts(data.data);
   }
 
   useEffect(() => {
@@ -41,7 +42,7 @@ export default function Home() {
   }, []);
   return (
     <div>
-     {posts && posts.length > 0 ?  <FeaturePost post={posts[0]}/> : "Desculpe, mas infelizmente ocorreu algum erro ao exibir seu post."}
+     {posts && posts.length > 0 ? <FeaturePost post={posts[0].attributes}/> : "Desculpe, mas infelizmente ocorreu algum erro ao exibir seu post."}
       <PostList posts={posts}/>
     </div>
   );

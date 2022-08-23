@@ -8,16 +8,16 @@ export default function Post({post}) {
       <div>
         <img
           className="post-img"
-          src={post.image}
-          alt={post.alt}
+          src={post?.hero?.data?.attributes?.formats?.small?.url}
+          alt={post?.alt}
         />
       </div>
       <div>
-        <p className="post-date">{post.date}</p>
+        <p className="post-date">{post?.date}</p>
         <Link to="#">
-          <p className="post-title">{post.title}</p>
+          <p className="post-title">{post?.title}</p>
         </Link>
-        <p className="post-description">{post.description}</p>
+        <p className="post-description">{post?.description}</p>
       </div>
     </div>
   );

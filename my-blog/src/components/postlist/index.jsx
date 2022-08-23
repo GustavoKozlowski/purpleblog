@@ -6,7 +6,7 @@ export default function PostList({ posts }) {
     <div className="post-list-container">
       {posts && 
         posts.map((post, index) => {
-        return <Post key={index} post={post}/>;
+        return <Post key={index} post={post.attributes}/>;
       })}
     </div>
   );
